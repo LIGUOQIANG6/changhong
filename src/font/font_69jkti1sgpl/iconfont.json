@@ -1,0 +1,177 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "173159",
+      "name": "物流管理icon",
+      "font_class": "wuliuguanliicon",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "1164839",
+      "name": "聊天",
+      "font_class": "liaotian",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "1235390",
+      "name": "小喇叭",
+      "font_class": "xiaolaba",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "1240088",
+      "name": "纸张",
+      "font_class": "zhizhang",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1244098",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "1308985",
+      "name": "919菜单_修理",
+      "font_class": "919caidan_xiuli",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "1727334",
+      "name": "13末端网点",
+      "font_class": "moduanwangdian",
+      "unicode": "e890",
+      "unicode_decimal": 59536
+    },
+    {
+      "icon_id": "2044425",
+      "name": "电视",
+      "font_class": "dianshi",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "2271248",
+      "name": "空调",
+      "font_class": "kongtiao",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
+      "icon_id": "2462883",
+      "name": "人",
+      "font_class": "icon-test",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "4186770",
+      "name": "音响",
+      "font_class": "yinxiang",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "4770728",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "5447711",
+      "name": "日常家电—吸油烟机",
+      "font_class": "richangjiadianxiyouyanji",
+      "unicode": "e6ac",
+      "unicode_decimal": 59052
+    },
+    {
+      "icon_id": "6207811",
+      "name": "调音器",
+      "font_class": "ziyuanldpi",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "6235951",
+      "name": "上箭头",
+      "font_class": "tubiaozhizuo-",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "6366905",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "6420495",
+      "name": "冰箱",
+      "font_class": "bingxiang-",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6999508",
+      "name": "云",
+      "font_class": "tuya_huabanfuben",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
+      "icon_id": "7347767",
+      "name": "咨询，在线客服，沟通，聊天",
+      "font_class": "huaban-",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "8348113",
+      "name": "地球",
+      "font_class": "diqiu",
+      "unicode": "e719",
+      "unicode_decimal": 59161
+    },
+    {
+      "icon_id": "8710536",
+      "name": "问题反馈",
+      "font_class": "wentifankui",
+      "unicode": "e701",
+      "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "10527626",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "10809207",
+      "name": "购物车 购物",
+      "font_class": "changyongtubiao-xianxingdaochu-zhuanqu-",
+      "unicode": "e70d",
+      "unicode_decimal": 59149
+    },
+    {
+      "icon_id": "11586023",
+      "name": "B2B_新品推荐",
+      "font_class": "tubiaozhizuomoban",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    }
+  ]
+}

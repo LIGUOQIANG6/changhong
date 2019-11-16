@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/长虹.css">
+    <link rel="stylesheet" href="./font/font_69jkti1sgpl/iconfont.css">
+</head>
+
+<body>
+    <!--********************标题开始******************** -->
+    <header>
+        <div class="toolbar-container">
+            <div class="toolbar-left">
+                <ul>
+                    <li><a href='' class="cur">长虹官网</a></li>
+                    <li><a href='' target="_blank">关于长虹</a></li>
+                    <li><a href='' target="_blank">商务合作</a></li>
+                    <li><a href="" target="_blank"><span class="iconfont icon-diqiu"></span>&nbsp;&nbsp;English</a></li>
+                </ul>
+            </div>
+            <div class="toolbar-right">
+                <div class="toolbar-login" id="unLoginDiv">
+                    <a href="javascript:;" id="sso_login">登录</a>
+                    <span>|</span>
+                    <a href="http://cn.changhong.com/sso/trs/registerByPhone.do" target="_blank">注册</a>
+                </div>
+                <div class="toolbar-login" style="display: none" id="hasLoginDiv">
+                    <!--<a href="">登录</a>-->
+                    <!--<span>|</span>-->
+                    <!--<a href="">注册</a>-->
+                    <a href="javascript:;" class="user-account" id="user-account"></a>
+                    <a href="javascript:;" id="sso_logout">退出</a>
+                </div>
+                <div class="toolbar-mytool">
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href='http://cn.changhong.com/wdch/' class="tool-myCQ" target="_blank"><span
+                                    class="iconfont icon-wode"></span>我的长虹</a>
+                        </div>
+                        <!-- <div class="tool-myCQ-tips">
+                    <div class="tool-myCQ-infor">
+                        <img src="http://cn.changhong.com/images/tool-myCQ-my-photo_03.jpg" alt="" width="60"
+                            height="60" id="user_image" />
+                        <p class="tool-myCQ-infor-phone"
+                            style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-right: 5px;"><a
+                                href="javascript:gotoLogin();" id="login_account">您好请登录</a></p>
+                        <p class="tool-myCQ-infor-setting"><a href="http://cn.changhong.com/wdch/zhsz/">账户设置</a></p>
+                    </div>
+                    <div class="tool-myCQ-operation">
+                        <a href="http://cn.changhong.com/ec/cshop/index.php?act=member_order&op=index">我的订单</a>
+                        <span>|</span>
+                        <a
+                            href="http://cn.changhong.com/ec/cshop/index.php?act=member_preselling_zero&op=index">我的预约</a>
+                        <div class="tool-myCQ-operation-cut"></div>
+                        <a href="http://cn.changhong.com/wdch/jdgj/">家电管家</a>
+                        <span>|</span>
+                        <a href="http://cn.changhong.com/wdch/jdgj/fwjl/">服务记录</a>
+                        <div class="tool-myCQ-operation-cut"></div>
+                        <a href="http://cn.changhong.com/wdch/wdsz/">我的收藏</a>
+                        <span>|</span>
+
+                        <div class="tool-myCQ-operation-cut"></div>
+                    </div>
+                </div> -->
+
+                    </div>
+                    <!--2018.5.31隐藏签到入口-->
+                    <!--<div class="tool-container w100">
+                <div class="tool-container-row">
+                    <a href='http://cn.changhong.com/wdch/wdqd/' target="_blank" class="tool-qd">签到</a>
+                </div>
+
+            </div>-->
+                    <!--2017.10.23修改隐藏，修改成"礼品兑换"<div class="tool-container">
+                <div class="tool-container-row">
+                    <a href='http://cn.changhong.com/wdch/wdxx/' target="_blank" class="tool-news"><b id="allMessage_top">(0)</b>消息</a>
+                </div>
+
+            </div>-->
+                    <div class="tool-container tool-shoppingCar-container">
+                        <!--20181011修改引入虹创有品
+                <div class="tool-container-row">
+                    <a href='http://cn.changhong.com/wdch/wdcs/' target="_blank" class="tool-news">礼品兑换</a>
+                </div>-->
+                        <div class="tool-container-row hcyp-ewm-container">
+                            <a href='http://cn.changhong.com/activity/xrzm2.html' target="_blank"
+                                class="tool-news"><span class="iconfont icon-liaotian"></span>虹创有品</a>
+                            <!-- <img class="hcyp-ewm-img" src="http://images.changhong.com/chgw/images/cnhome-hcyp-ewm.jpg"
+                        alt="" /> -->
+                        </div>
+                    </div>
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href="http://cn.changhong.com/ec/cshop/index.php?act=cart&op=index"
+                                class="tool-shoppingCar"><span id="mycartNum" style="display:none;"></span><span
+                                    class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span>购物车</a>
+                        </div>
+                        <!-- <div class="tool-container-tips">
+                    <div class="tool-container-tips-warp">
+                    </div>
+                    <div class="tool-goods-pay" style="display: none">
+                        <div class="tool-car-infor">
+                            <p><span id="totalNum">0</span>件商品</p>
+                            <h1>总价：<span id="totalPrice"></span></h1>
+                        </div>
+                        <a href="javascript:;" class="goods-pay-btn" id="goods-pay-btn">立即结算</a>
+                    </div>
+                    <h1 class="tips-nogoods" style="display:none">
+                        购物车中还没有商品，赶紧选购吧
+                    </h1>
+                </div>
+            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--******************** 标题结束******************** -->
+    <!-- ********************导航栏开始********************-->
+    <nav>
+        <div class="com-width clearfix header-nav-container">
+            <div class="header-log">
+                <a href="#">
+                    <img src="./images/01.png" alt="一张图片">
+                </a>
+            </div>
+            <div class="home-nav">
+                <ul>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">首页</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">电视</a>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ电视
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ空调
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">立柜式</a>
+                                    <a href="#" target="_blank">壁挂式</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ冰箱
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">对开门</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">空调</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">冰洗</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">生活家电</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">显示器</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-nav-menu">
+                            <a href="#">服务</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- ******搜索框****** -->
+            <div class="home-search">
+                <input type="text" id="searchInput" class="home-search-key" value="Q6R">
+                <span class="iconfont icon-fangdajing home-search-btn"></span>
+
+            </div>
+            <!-- 启客 -->
+            <div class="home-nav-inner home-nav-inner-show home-nav-inner-index">
+                <ul>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--启客系列  -->
+                            <span class="iconfont icon-icon-test qike"></span>
+                            <a href="#" target="_blank">启客系列</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ电视
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ空调
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">立柜式</a>
+                                    <a href="#" target="_blank">壁挂式</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ冰箱
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">对开门</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--平板电视  -->
+                            <span class="iconfont icon-dianshi qike"></span>
+                            <a href="#" target="_blank">平板电视</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    CHIQ电视
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                    <a href="#" target="_blank">Q5R</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    激光电视
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">4k超清电视</a>
+                                    <a href="#" target="_blank">商用显示</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    HDR电视
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">智能电视</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--空调产品-->
+                            <span class="iconfont icon-kongtiao qike"></span>
+                            <a href="#" target="_blank">空调产品</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    壁挂式
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">大1p</a>
+                                    <a href="#" target="_blank">正1.5p</a>
+                                    <a href="#" target="_blank">2p</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    立柜式
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">2p</a>
+                                    <a href="#" target="_blank">3p</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    中央空调
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">风管机</a>
+                                    <a href="#" target="_blank">天花机</a>
+                                    <a href="#" target="_blank">热泵产品</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--冰洗产品-->
+                            <span class="iconfont icon-bingxiang- qike"></span>
+                            <a href="#" target="_blank">冰洗产品</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    冰箱
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">对开门</a>
+                                    <a href="#" target="_blank">多门</a>
+                                    <a href="#" target="_blank">三门</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    洗衣机
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">波轮洗衣机</a>
+                                    <a href="#" target="_blank">滚筒洗衣机</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    冰柜
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">150L</a>
+                                    <a href="#" target="_blank">500L</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--生活家电-->
+                            <span class="iconfont icon-richangjiadianxiyouyanji qike"></span>
+                            <a href="#" target="_blank">生活家电</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    生活电器
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">净化器</a>
+                                    <a href="#" target="_blank">净水器</a>
+                                    <a href="#" target="_blank">风扇</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    厨卫大电
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">集成灶</a>
+                                    <a href="#" target="_blank">吸油烟机</a>
+                                    <a href="#" target="_blank">燃气灶</a>
+                                    <a href="#" target="_blank">电热水器</a>
+                                    <a href="#" target="_blank">空气能热水器</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    厨卫小电
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">养生壶</a>
+                                    <a href="#" target="_blank">电压力锅</a>
+                                    <a href="#" target="_blank">电饭煲</a>
+                                    <a href="#" target="_blank">厨卫配件</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--数码音影-->
+                            <span class="iconfont icon-yinxiang qike"></span>
+                            <a href="#" target="_blank">数码音影</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    移动通讯
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">手机</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    娱乐音影
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">音响</a>
+                                    <a href="#" target="_blank">话筒</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    数码配件
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">移动电源</a>
+                                    <a href="#" target="_blank">电池</a>
+                                    <a href="#" target="_blank">电饭煲</a>
+                                    <a href="#" target="_blank">厨卫配件</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="home-inner-menu home-inner-chiq">
+                            <!--智慧家庭-->
+                            <span class="iconfont icon-ziyuanldpi qike"></span>
+                            <a href="#" target="_blank">智慧家庭</a>
+                            <span></span>
+                        </div>
+                        <div class="home-inner-secd " style="background-color: white;">
+                            <!-- *chiq电视* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    照明
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">智能照明</a>
+                                    <a href="#" target="_blank">手电</a>
+                                </div>
+                            </div>
+                            <!-- *chiq空调* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    显示器
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">音响</a>
+                                    <a href="#" target="_blank">话筒</a>
+                                </div>
+                            </div>
+                            <!-- *chiq冰箱* -->
+                            <div class="inner-pro-list">
+                                <a href="#" class="inner-list-name" target="_blank">
+                                    <!-- 图片改 -->
+                                    <img src="http://cn.changhong.com/cpzx/chiq/chiq_televisions/images/P020160928565091974075.jpg"
+                                        class="lazy-nav" alt="" width="60" height="60">
+                                    健康产品
+                                </a>
+                                <div class="inner-pro-content">
+                                    <a href="#" target="_blank">生物医疗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ********************导航栏结束********************-->
+    <!-- ********************中间开始******************** -->
+    <main>
+        <!-- ********************轮播图开始******************** -->
+        <section class="home-banner" onselectstart="return false" style="-moz-user-select:none;">
+            <div class="home-banner-container"></div>
+            <div class="home-banner-tool com-width"></div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="..." alt="...">
+                        <div class="carousel-caption">
+                            ...
+                        </div>
+                    </div>
+                    ...
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </section>
+        <!-- ********************轮播图结束******************** -->
+
+    </main>
+    <!-- ********************中间结束******************** -->
+
+    <!--********************脚注开始********************  -->
+    <footer>
+        <!-- ********************物流开始******************** -->
+        <div class="com-width">
+            <div class="footer-help">
+                <div class="help-about">
+                    <div class="about-CQ lf">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-wuliuguanliicon "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">物流快线</h1>
+                            <p>及时响应准确送达</p>
+                        </div>
+                    </div>
+                    <div class="about-CQ rt">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-919caidan_xiuli "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">无忧报修</h1>
+                            <p>7*24小时客服在线</p>
+                        </div>
+                    </div>
+                    <div class="about-CQ about-CQ-center">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-moduanwangdian "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">售后网点</h1>
+                            <p>20000余家售后网点</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-ways">
+                    <div class="help-server lf">
+                        <ul class="lf">
+                            <li class="help-title">品牌渠道</li>
+                            <li>
+                                <a href="#" target="_blank">长虹天猫</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">长虹京东</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">长虹苏宁</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">长虹国美</a>
+                            </li>
+                        </ul>
+                        <ul class="lf ml40">
+                            <li class="help-title">友情链接</li>
+                            <li>
+                                <a href="#" target="_blank">MELING美菱</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">中科美菱</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">日电科技</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">长虹手机</a>
+                            </li>
+                        </ul>
+                        <ul class="lf ml40">
+                            <li class="help-title">友情链接</li>
+                            <li>
+                                <a href="#" target="_blank">家事帮</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">腾讯视频•TV端</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">虹创有品</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">长虹电子</a>
+                            </li>
+                        </ul>
+                        <ul class="rt">
+                            <li class="help-title">服务支持</li>
+                            <li>
+                                <a href="#" target="_blank">产品查询</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">维修服务</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">延保服务</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">下载中心</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-team help-server lf">
+                        <ul class="lf">
+                            <li class="help-title">长虹集团</li>
+                            <li>
+                                <a href="#" target="_blank">公司动态</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">投资者关系</a>
+                            </li>
+                        </ul>
+                        <ul class="rt">
+                            <li class="help-title">商务合作</li>
+                            <li>
+                                <a href="#" target="_blank">经销商登录</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">供应商登录</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">服务商登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-tel lf">
+                        <p>
+                            <span class="iconfont icon-huaban- zaixian "></span>
+                            <a href="#">在线客服</a>
+                        </p>
+                        <p>
+                            <span class="iconfont icon-wentifankui  zaixian"></span>
+                            <a href="#">问题反馈</a>
+                        </p>
+                        <h1 style="margin-top:26px;">4008-111-666</h1>
+                        <h1>4008-111-666</h1>
+                    </div>
+                    <div class="help-code">
+                        <div class="help-code-box lf">
+                            <img src="./images/erweima.jpg" alt="">
+                            <p>官方特卖</p>
+                        </div>
+                        <div class="help-code-box rt">
+                            <img src="./images/erweima.jpg" alt="">
+                            <p>长虹服务</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-statement clearfix">
+            <div class="com-width">
+                <div class="foot-logo">
+                    <img src="./images/footer-logo_ch.png" width="227" height="36" alt="">
+                </div>
+                <div class="foot-txt">
+                    <p><a href="#">蜀ICP备09001737号-1</a>2019 四川长虹电器股份有限公司 版权所有</p>
+                    <p>地址：四川省绵阳市高新区绵兴东路35号</p>
+                </div>
+                <div class="foot-note">
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-01.png" alt="" width="26" height="31">
+                        经营性网站备案信息
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-02.png" alt="" width="26" height="31">
+                        诚信网站
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-04.png" alt="" width="26" height="31">
+                        工商网监
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-01.png" alt="" width="26" height="31">
+                        网上交易保障中心
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ********************物流结束******************** -->
+    </footer>
+    <!--********************脚注结束********************  -->
+</body>
+
+</html>
