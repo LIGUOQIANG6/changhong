@@ -105,13 +105,10 @@ nav > .com-width > .home-nav > ul > li {
   width: 90px;
   list-style: none;
 }
-nav > .com-width > .home-nav > ul > li > .home-inner-secd {
-  display: none;
-}
 nav > .com-width > .home-nav > ul > li:hover > .home-nav-menu > a {
   color: red;
 }
-nav > .com-width > .home-nav > ul > li:hover > .home-inner-secd {
+nav > .com-width > .home-nav > ul > li:hover > .home-nav-sub {
   display: block;
 }
 nav > .com-width > .home-nav > ul > li > .home-nav-menu {
@@ -123,6 +120,90 @@ nav > .com-width > .home-nav > ul > li > .home-nav-menu > a {
   font-size: 16px;
   color: #333333;
   text-decoration: none;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub {
+  display: none;
+  height: 229px;
+  background: #ffffff;
+  border-top: 1px solid #eeeeee;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width {
+  width: 1226px;
+  margin: 0 auto;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-sub-title {
+  padding-left: 0px;
+  line-height: 229px;
+  height: 229px;
+  margin-left: 32px;
+  float: left;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-sub-title > a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #666666;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont {
+  margin-left: 167px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box {
+  float: left;
+  margin: 42px 36px 0px;
+  position: relative;
+  margin-top: 20px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box .home-goods-img {
+  margin-top: 0px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box .home-goods-img img {
+  display: block;
+  border: 0;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box p {
+  margin-top: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 23px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box p a {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: none;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 14px;
+  color: #f12020;
+  font-weight: normal;
+  text-align: center;
+  margin-top: -6px;
+}
+nav > .com-width > .home-nav > ul > li .home-nav-sub .com-width .home-nav-sub-cont .home-sub-box .home-sub-line {
+  top: 4px;
+  height: 120px;
+  position: absolute;
+  width: 1px;
+  background: #eeeeee;
+  left: 176px;
 }
 nav > .com-width > .home-search {
   height: 38px;
@@ -165,7 +246,7 @@ nav > .com-width > .home-nav-inner {
   z-index: 50;
 }
 nav > .com-width > .home-nav-inner > ul {
-  height: 500px;
+  height: 480px;
   background: rgba(0, 0, 0, 0.4);
   padding: 10px 0px;
   list-style: none;
@@ -286,8 +367,316 @@ main {
   height: 4010px;
   background: #ccc;
 }
+main a {
+  text-decoration: none;
+  list-style: none;
+}
+main .com-width {
+  width: 1226px;
+  margin: 0 auto;
+}
+main .com-width .home-radio {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+main .com-width .home-radio .icon-xiaolaba {
+  float: left;
+  line-height: 40px;
+  font-size: 35px;
+  margin-right: 10px;
+  color: #eee;
+}
+main .com-width .home-radio h1 {
+  font-weight: normal;
+  line-height: 40px;
+  font-size: 14px;
+  color: #333333;
+  float: left;
+}
+main .com-width .home-radio .home-radio-scroll {
+  overflow: hidden;
+  float: left;
+}
+main .com-width .home-radio .home-radio-scroll .home-radio-container {
+  overflow: hidden;
+  width: 1128px;
+  float: left;
+  height: 40px;
+  top: 0px;
+  width: 230px;
+  position: relative;
+}
+main .com-width .home-activity {
+  height: 160px;
+  margin-bottom: 30px;
+}
+main .com-width .home-activity a {
+  float: none;
+  display: block;
+}
+main .com-width .home-activity li {
+  list-style: none;
+}
+main .com-width .home-activity .home-activity-container {
+  height: 160px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+main .com-width .home-activity .home-activity-container .home-activity-link {
+  width: 320px;
+  margin-left: 13px;
+}
+main .com-width .home-activity .home-activity-container .home-activity-link a {
+  position: relative;
+}
+main .com-width .home-activity .home-activity-container .home-activity-link .home-activity-btn {
+  height: 8px;
+  position: absolute;
+  bottom: 8px;
+  right: 20px;
+  z-index: 10;
+  text-align: center;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav {
+  width: 226px;
+  overflow: hidden;
+  position: relative;
+  background: #585858;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav .activity-nav-line-f {
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #717171;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav .activity-nav-line-s {
+  position: absolute;
+  left: 50%;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: #717171;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav ul {
+  list-style: none;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav ul li {
+  width: 50%;
+  height: 80px;
+  float: left;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav ul li a {
+  display: block;
+  height: 79px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1;
+  text-decoration: none;
+}
+main .com-width .home-activity .home-activity-container .home-activity-nav ul li a .zhizhang {
+  display: block;
+  font-size: 30px;
+  margin-top: 8px;
+}
+main .home-series {
+  height: 685px;
+  padding-top: 30px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+main .home-series-left {
+  width: 226px;
+  float: left;
+}
+main .home-series-left .home-series-title {
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+main .home-series-left .home-series-title p {
+  padding-left: 13px;
+  font-size: 22px;
+  color: #333333;
+  line-height: 25px;
+  height: 25px;
+  float: left;
+}
+main .home-series-left .home-series-title a {
+  font-size: 14px;
+  float: right;
+  margin-right: 5px;
+}
+main .home-series-left .home-theme-TV a {
+  color: #8a4532;
+}
+main .home-series-left .home-theme-TV p {
+  border-left: 4px solid #ca694e;
+}
+main .home-series-left .home-series-tj {
+  height: 630px;
+  overflow: hidden;
+  width: 226px;
+  display: block;
+}
+main .home-series-left .home-series-tj img {
+  display: block;
+  border: 0;
+}
+main .home-series-content {
+  margin-left: 226px;
+  margin-bottom: 15px;
+}
+main .home-series-content .home-series-nav {
+  line-height: 30px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+main .home-series-content .home-series-nav ul {
+  overflow: hidden;
+  float: right;
+  margin-right: 8px;
+}
+main .home-series-content .home-series-nav ul li {
+  list-style: none;
+  float: left;
+  margin-left: 33px;
+  line-height: 25px;
+  height: 25px;
+}
+main .home-series-content .home-series-nav ul li:hover a {
+  color: red;
+  font-size: 14px;
+}
+main .home-series-content .home-series-nav ul li a {
+  font-size: 14px;
+  color: #333333;
+}
+main .home-series-content .home-goods-right {
+  height: 640px;
+}
+main .home-series-content .home-goods-right .home-ele-f {
+  width: 190px;
+  height: 260px;
+  margin-bottom: 10px;
+  padding: 25px;
+  float: left;
+  margin-left: 10px;
+  background: #ffffff;
+}
+main .home-series-content .home-goods-right .home-ele-f:hover {
+  box-shadow: 0px 0px 5px 3px #e9e9e9;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-img {
+  height: 160px;
+  width: 160px;
+  margin: 0px auto;
+  line-height: 160px;
+  text-align: center;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-img img {
+  /* padding-top: 8px; */
+  width: 160px;
+  height: 160px;
+  margin: 0px auto;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-text > h1 {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 15px;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-text > h1 a {
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-text > p {
+  margin-top: 10px;
+  line-height: 12px;
+  font-size: 12px;
+  margin-top: 7px;
+  color: #999;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 12px;
+}
+main .home-series-content .home-goods-right .home-ele-f .home-ele-text h2 {
+  font-size: 16px;
+  text-align: center;
+  color: #f12020;
+  line-height: 22px;
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+}
+main .xhome-fixl {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -670px;
+  margin-top: -150px;
+}
+main .xhome-fixl ul {
+  overflow: hidden;
+}
+main .xhome-fixl ul li {
+  width: 45px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+main .xhome-fixl ul li a {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  border-bottom: 1px solid #d6d6d6;
+}
+main .xhome-fixl ul .clicked > a {
+  background-color: #ee1411;
+  color: #fff;
+}
+main .pro-float-box {
+  position: fixed;
+  right: 0px;
+  bottom: 224px;
+}
+main .pro-float-box ul,
+main .pro-float-box li {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background: #cccccc;
+}
+main .pro-float-box ul a,
+main .pro-float-box li a {
+  position: relative;
+}
+main .pro-float-box ul a .kefu,
+main .pro-float-box li a .kefu {
+  font-size: 36px;
+  line-height: 40px;
+  color: #fefefe;
+  text-align: center;
+}
+main .pro-float-box .pro-float-center {
+  border-top: 1px solid #f9f9f9;
+  border-bottom: 1px solid #f9f9f9;
+}
 .wuliu {
-  height: 340px ;
+  height: 340px;
   background: orange;
 }
 footer {
@@ -457,6 +846,7 @@ footer > .com-width > .footer-help > .help-ways > .help-tel > p {
 footer > .com-width > .footer-help > .help-ways > .help-tel > p > a {
   font-size: 14px;
   color: red;
+  text-decoration: none;
   margin-top: 5px;
 }
 footer > .com-width > .footer-help > .help-ways > .help-tel > p > .zaixian {
