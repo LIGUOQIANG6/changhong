@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color          : #333;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #fff;
+
+    >div {
+        margin-left: 40px;
+        float      : left;
+
+        >img {
+            display: block;
+        }
+    }
+
+    >span {
+        font-size  : 24px;
+        color      : #333;
+        border-left: 2px solid #ccc;
+        line-height: 78px;
+        padding    : 0 16px;
+    }
+
+}
+
+
+.main {
+    padding-top: 40px;
+
+    >form {
+        width           : 520px;
+        margin          : 0 auto;
+        background-color: #fff;
+        border-radius   : 10px;
+        overflow        : hidden;
+
+        >.list {
+            overflow: hidden;
+
+            >li {
+                float: left;
+
+                >a {
+                    display         : inline-block;
+                    width           : 260px;
+                    line-height     : 60px;
+                    font-size       : 20px;
+                    text-align      : center;
+                    background-color: #dfe4e8;
+                    color           : #8e98a0;
+                }
+
+                >.bgc {
+                    background-color: #fff;
+                    color           : #333;
+                }
+            }
+        }
+
+        >.content {
+            div>.user {
+                display: block;
+                float  : left;
+                width  : 30px;
+
+                margin     : 5px;
+                height     : 30px;
+                font-size  : 26px;
+                line-height: 30px;
+                text-align : center;
+            }
+
+            width: 100%;
+
+            >.none {
+                display: none;
+            }
+
+            >.phone {
+                >div {
+                    margin       : 0 auto;
+                    width        : 380px;
+                    height       : 42px;
+                    border       : 1px solid #bdbdbd;
+                    border-radius: 2px;
+                    margin-top   : 30px;
+
+
+                    >input {
+                        line-height: 38px;
+                        font-size  : 16px;
+                        outline    : none;
+                        border     : 0;
+                        width      : 300px;
+
+                    }
+
+                }
+
+            }
+
+            >.msg {
+                >div {
+                    margin       : 0 auto;
+                    width        : 380px;
+                    height       : 42px;
+                    border       : 1px solid #bdbdbd;
+                    border-radius: 2px;
+                    margin-top   : 30px;
+
+                    >img {
+                        width         : 30px;
+                        height        : 30px;
+                        vertical-align: middle;
+                    }
+
+                    >input {
+                        line-height: 38px;
+                        font-size  : 16px;
+                        outline    : none;
+                        // display : none;
+                        border     : 0;
+                        width      : 300px;
+                    }
+
+                    >#yan {
+                        width: 200px;
+                    }
+
+                    >button {
+                        display         : inline-block;
+                        width           : 100px;
+                        line-height     : 38px;
+                        font-size       : 16px;
+                        outline         : none;
+                        border          : 0;
+                        width           : 130px;
+                        text-align      : center;
+                        background-color: #fff;
+                        border-left     : 1px solid #bdbdbd;
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+        >button {
+            width        : 380px;
+            display      : block;
+            border       : 0;
+            border-radius: 5px;
+            background   : #1c95f3;
+            color        : #ffffff;
+            font-size    : 18px;
+            line-height  : 40px;
+            cursor       : pointer;
+            outline      : none;
+            margin       : 30px auto 0;
+        }
+
+        >.reg {
+            overflow: hidden;
+            padding : 10px 70px 5px;
+
+            >li {
+                float: right;
+
+                &:first-child {
+                    border-left: 1px solid #1c95f3;
+                }
+
+                >a {
+                    color: #1c95f3;
+                }
+            }
+        }
+
+        >.lg {
+            position   : relative;
+            width      : 470px;
+            line-height: 25px;
+            margin     : 25px auto 10px auto;
+            font-size  : 14px;
+            text-align : center;
+            color      : #949491;
+
+            >div {
+                position        : absolute;
+                width           : 180px;
+                height          : 1px;
+                background-color: #e5e9ec;
+
+
+            }
+
+            >.left {
+                left: 0;
+                top : 50%;
+            }
+
+            >.right {
+                right: 0;
+                top  : 50%;
+            }
+        }
+
+        >.tu {
+            width : 320px;
+            margin: 20px auto 30px auto;
+            // border-radius: 50%;
+            >img {
+                cursor: pointer;
+                border-radius: 50%;
+                width : 46px;
+                height: 46px;
+                margin: 0 14px;
+            }
+        }
+
+    }
+}

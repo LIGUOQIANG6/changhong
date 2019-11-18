@@ -13,6 +13,20 @@
       "unicode_decimal": 58893
     },
     {
+      "icon_id": "654164",
+      "name": "短信验证码",
+      "font_class": "duanxinyanzhengma",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "1127367",
+      "name": "用户",
+      "font_class": "user",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "1164839",
       "name": "聊天",
       "font_class": "liaotian",
@@ -74,6 +88,13 @@
       "font_class": "icon-test",
       "unicode": "e678",
       "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "2811963",
+      "name": "手机",
+      "font_class": "icon--",
+      "unicode": "e650",
+      "unicode_decimal": 58960
     },
     {
       "icon_id": "4186770",
@@ -151,6 +172,13 @@
       "font_class": "wentifankui",
       "unicode": "e701",
       "unicode_decimal": 59137
+    },
+    {
+      "icon_id": "9447888",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e668",
+      "unicode_decimal": 58984
     },
     {
       "icon_id": "10527626",
