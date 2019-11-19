@@ -339,29 +339,56 @@ nav > .com-width > .home-nav-inner > .home-nav-inner-show ul {
   display: block;
   border: none;
 }
-section {
+main > .home-banner .vis {
+  width: 1920px;
   height: 500px;
-  background: url(http://images.changhong.com/chgw/gwsy/lbdt/201901/W020190726406921486246.jpg);
-}
-section > .home-banner {
-  height: 360px;
-  width: 100%;
   position: relative;
-  height: 500px;
   overflow: hidden;
 }
-section > .home-banner > .home-banner-container {
+main > .home-banner ul {
+  width: 19200px;
   height: 500px;
-}
-section > .home-banner > .home-banner-tool {
-  top: 0px;
+  list-style: none;
   position: absolute;
-  left: 50%;
-  margin-left: -615px;
 }
-section > .home-banner > .com-width {
-  width: 1226px;
-  margin: 0 auto;
+main > .home-banner li {
+  width: 1920px;
+  float: left;
+}
+main > .home-banner img {
+  width: 100%;
+  height: 500px;
+  float: left;
+}
+main > .home-banner .vis > span {
+  position: absolute;
+  top: 45%;
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+main > .home-banner .vis > span:last-of-type {
+  right: 0;
+}
+main > .home-banner .vis > div > span {
+  float: left;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px #999 solid;
+  margin: 0 10px;
+}
+main > .home-banner .quan {
+  position: absolute;
+  left: 40%;
+  bottom: 10px;
+  cursor: pointer;
+}
+main > .home-banner .cl {
+  width: 12px !important;
+  height: 12px !important;
+  border: 0 !important;
+  background: red;
 }
 main {
   height: 4010px;
@@ -648,8 +675,10 @@ main .xhome-fixl ul li a {
   border-bottom: 1px solid #d6d6d6;
 }
 main .xhome-fixl ul .clicked > a {
-  background-color: #ee1411;
   color: #fff;
+}
+main .active {
+  background-color: red;
 }
 main .pro-float-box {
   position: fixed;

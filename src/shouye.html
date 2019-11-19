@@ -7,10 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/shouye.css">
+    <script src="./js/require.js" data-main="./js/main.index.js"></script>
     <link rel="stylesheet" href="./font/font_69jkti1sgpl/iconfont.css">
+    <!-- <script type="module">
+        import a from   './demoMdule.js'
+    </script> -->
 </head>
 
 <body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .list {
+            list-style: none;
+            overflow: hidden;
+            margin: 50px;
+        }
+
+        .list>.item {
+            float: left;
+            width: 250px;
+            margin: 20px;
+            transition: margin-top .3s;
+        }
+
+        .p-price {
+            color: red;
+        }
+
+        .p-price>.yuan {
+            font-size: 14px;
+        }
+
+        .list>.item>a {
+            text-decoration: none;
+            display: block;
+        }
+
+        .list>.item:hover {
+            box-shadow: 3px 3px 3px #ccc;
+            margin-top: 17px;
+        }
+    </style>
     <!--********************标题开始******************** -->
     <header>
         <div class="toolbar-container">
@@ -50,8 +92,8 @@
                     </div>
                     <div class="tool-container tool-shoppingCar-container">
                         <div class="tool-container-row">
-                            <a href="javascript:;"
-                                class="tool-shoppingCar"><span id="mycartNum" style="display:none;"></span><span
+                            <a href="javascript:;" class="tool-shoppingCar"><span id="mycartNum"
+                                    style="display:none;"></span><span
                                     class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span>购物车</a>
                         </div>
                     </div>
@@ -572,6 +614,9 @@
                                     <a href="javascript:;" target="_blank">正1.5p</a>
                                     <a href="javascript:;" target="_blank">2p</a>
                                 </div>
+                                <ul class="list">
+
+                                </ul>
                             </div>
                             <!-- *chiq空调* -->
                             <div class="inner-pro-list">
@@ -805,45 +850,23 @@
     <main>
         <!-- ********************轮播图开始******************** -->
         <section class="home-banner" onselectstart="return false" style="-moz-user-select:none;">
-            <div class="home-banner-container"></div>
-            <div class="home-banner-tool com-width"></div>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="javascript:;carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="javascript:;carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="javascript:;carousel-example-generic" data-slide-to="2"></li>
-                </ol>
-
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="..." alt="...">
-                        <div class="carousel-caption">
-                            ...
-                        </div>
+                <div class="i-banner-vis vis">
+                    <ul class="clear">
+                        <li><img src="./images/banner-02.jpg" alt=""></li>
+                        <li><img src="./images/banner-02.jpg" alt=""></li>
+                        <li><img src="./images/banner-03.jpg" alt=""></li>
+                    </ul>
+                    <div class="quan">
+                        <span class="cl"></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <div class="item">
-                        <img src="..." alt="...">
-                        <div class="carousel-caption">
-                            ...
-                        </div>
-                    </div>
-                    ...
+                    <p><span></span></p>
+                    <p><span></span></p>
                 </div>
 
-                <!-- Controls -->
-                <a class="left carousel-control" href="javascript:;carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="javascript:;carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-
         </section>
+        
         <!-- ********************轮播图结束******************** -->
         <!-- 公告栏 -->
         <!-- <div class="home-radio " id="xhome-series">
@@ -851,7 +874,7 @@
             <h1>公告：</h1>
         </div> -->
         <div class="com-width">
-            <div class="xfindex">
+            <div class="xfindex hot">
                 <!-- 公告-->
 
                 <div class="home-radio " id="xhome-series">
@@ -951,14 +974,13 @@
             <!-- 公告结束 -->
 
             <!-- 电视系列-->
-            <div class="home-series xfindex">
+            <div class="home-series xfindex dianshi">
                 <div class="home-series-left">
                     <div class="home-series-title home-theme-TV">
                         <p>电视产品</p>
                         <a href='http://cn.changhong.com/cpzx/pb_televisions/?f=floor' target="_blank">查看更多 ></a>
                     </div>
-                    <a href='javascript:;'
-                        class="home-series-tj" target="_blank">
+                    <a href='javascript:;' class="home-series-tj" target="_blank">
                         <img src="./images/b-01.jpg" class="lazy" alt="" width="226" height="630" />
                     </a>
                 </div>
@@ -966,31 +988,55 @@
                     <div class="home-series-nav">
                         <ul>
 
-                            <li><a href="javascript:;"
-                                    target="_blank">CHiQ电视</a></li>
-                            <li><a href="javascript:;"
-                                    target="_blank">激光电视</a></li>
-                            <li><a href="javascript:;"
-                                    target="_blank">4K超高清电视</a></li>
-                            <li><a href="javascript:;"
-                                    target="_blank">HDR电视</a></li>
-                            <li><a href="javascript:;"
-                                    target="_blank">智能语音电视</a></li>
+                            <li><a href="javascript:;" target="_blank">CHiQ电视</a></li>
+                            <li><a href="javascript:;" target="_blank">激光电视</a></li>
+                            <li><a href="javascript:;" target="_blank">4K超高清电视</a></li>
+                            <li><a href="javascript:;" target="_blank">HDR电视</a></li>
+                            <li><a href="javascript:;" target="_blank">智能语音电视</a></li>
                         </ul>
                     </div>
-                    <div class="home-goods-right" id="TV-div-number">
+                    <div class="home-goods-right xuanrang" id="TV-div-number">
 
-                        <div class="home-ele-f ">
-                            <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                        <!-- <div class="home-ele-f "> -->
+                            <!-- <div class="home-ele-img">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
+                                <p>开机物联电视 关机智能音箱</p>
+                                <h2>￥10997.00</h2>
+                            </div> -->
+                        <!-- </div> -->
+
+                        <!-- <div class="home-ele-f xuanrang"> -->
+                            <!-- <div class="home-ele-img">
+                                <a href='javascript:;' target="_blank">
+                                    <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
+                                        class="lazy" alt="" SRC="./images/TV-01.jpg" />
+                                </a>
+                            </div>
+                            <div class="home-ele-text" r3code="CH5012137">
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
+                                <p>开机物联电视 关机智能音箱</p>
+                                <h2>￥10997.00</h2>
+                            </div> -->
+                        <!-- </div> -->
+
+                        <div class="home-ele-f ">
+                            <div class="home-ele-img">
+                                <a href='javascript:;' target="_blank">
+                                    <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
+                                        class="lazy" alt="" SRC="./images/TV-01.jpg" />
+                                </a>
+                            </div>
+                            <div class="home-ele-text" r3code="CH5012137">
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -998,15 +1044,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1014,15 +1059,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1030,15 +1074,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1046,15 +1089,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1062,47 +1104,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/TV-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
-                                <p>开机物联电视 关机智能音箱</p>
-                                <h2>￥10997.00</h2>
-                            </div>
-                        </div>
-
-                        <div class="home-ele-f ">
-                            <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
-                                    <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
-                                        class="lazy" alt="" SRC="./images/TV-01.jpg" />
-                                </a>
-                            </div>
-                            <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
-                                <p>开机物联电视 关机智能音箱</p>
-                                <h2>￥10997.00</h2>
-                            </div>
-                        </div>
-
-                        <div class="home-ele-f ">
-                            <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
-                                    <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
-                                        class="lazy" alt="" SRC="./images/TV-01.jpg" />
-                                </a>
-                            </div>
-                            <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1112,7 +1121,7 @@
             </div>
             <!-- 电视系列end-->
             <!-- 空调系列-->
-            <div class="home-series xfindex">
+            <div class="home-series xfindex kongtiao">
                 <div class="home-series-left">
                     <div class="home-series-title home-theme-TV">
                         <p>空调产品</p>
@@ -1126,26 +1135,23 @@
                 <div class="home-series-content">
                     <div class="home-series-nav">
                         <ul>
-                            <li><a href="javascript:;"
-                                    target="_blank">冰箱</a></li>
+                            <li><a href="javascript:;" target="_blank">冰箱</a></li>
                             <li><a href="javascript:;
-                                "
-                                    target="_blank">洗衣机</a></li>
+                                " target="_blank">洗衣机</a></li>
                         </ul>
                     </div>
                     <div class="home-goods-right" id="TV-div-number">
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1153,15 +1159,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1169,15 +1174,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1185,15 +1189,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1201,15 +1204,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1217,15 +1219,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1233,15 +1234,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1249,15 +1249,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1267,7 +1266,7 @@
             </div>
             <!-- 空调系列end-->
             <!-- 冰洗系列-->
-            <div class="home-series xfindex">
+            <div class="home-series xfindex bingxi">
                 <div class="home-series-left">
                     <div class="home-series-title home-theme-TV">
                         <p>冰洗产品</p>
@@ -1281,26 +1280,23 @@
                 <div class="home-series-content">
                     <div class="home-series-nav">
                         <ul>
-                            <li><a href="javascript:;"
-                                    target="_blank">冰箱</a></li>
+                            <li><a href="javascript:;" target="_blank">冰箱</a></li>
                             <li><a href="javascript:;
-                                "
-                                    target="_blank">洗衣机</a></li>
+                                " target="_blank">洗衣机</a></li>
                         </ul>
                     </div>
                     <div class="home-goods-right" id="TV-div-number">
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1308,15 +1304,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1324,75 +1319,70 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1400,15 +1390,14 @@
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1418,7 +1407,7 @@
             </div>
             <!-- 冰洗系列end-->
             <!-- 生活家电-->
-            <div class="home-series xfindex">
+            <div class="home-series xfindex shenhuo">
                 <div class="home-series-left">
                     <div class="home-series-title home-theme-TV">
                         <p>生活家电</p>
@@ -1432,131 +1421,121 @@
                 <div class="home-series-content">
                     <div class="home-series-nav">
                         <ul>
-                            <li><a href="javascript:;"
-                                    target="_blank">冰箱</a></li>
+                            <li><a href="javascript:;" target="_blank">冰箱</a></li>
                             <li><a href="javascript:;
-                                "
-                                    target="_blank">洗衣机</a></li>
+                                " target="_blank">洗衣机</a></li>
                         </ul>
                     </div>
                     <div class="home-goods-right" id="TV-div-number">
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1566,7 +1545,7 @@
             </div>
             <!-- 生活家电end-->
             <!-- 周边产品-->
-            <div class="home-series xfindex" style="height: 365px;">
+            <div class="home-series xfindex zhoubian" style="height: 365px;">
                 <div class="home-series-left" style="height:310px">
                     <div class="home-series-title home-theme-TV">
                         <p>周边产品</p>
@@ -1580,71 +1559,65 @@
                 <div class="home-series-content">
                     <div class="home-series-nav">
                         <ul>
-                            <li><a href="javascript:;"
-                                    target="_blank">冰箱</a></li>
+                            <li><a href="javascript:;" target="_blank">冰箱</a></li>
                             <li><a href="javascript:;
-                                "
-                                    target="_blank">洗衣机</a></li>
+                                " target="_blank">洗衣机</a></li>
                         </ul>
                     </div>
                     <div class="home-goods-right" id="TV-div-number">
 
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-01.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-02.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-03.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
                         </div>
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;'
-                                    target="_blank">
+                                <a href='javascript:;' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" alt="" SRC="./images/kt-04.jpg" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;'
-                                        target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a></h1>
+                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">65英寸 AI音响物联无边全面屏</a>
+                                </h1>
                                 <p>开机物联电视 关机智能音箱</p>
                                 <h2>￥10997.00</h2>
                             </div>
@@ -1670,12 +1643,12 @@
             <!-- 左侧固定栏目 -->
             <div class="xhome-fixl">
                 <ul>
-                    <li class="clicked"><a href="javascript:;">热门</a></li>
-                    <li><a href="javascript:;">电视</a></li>
-                    <li><a href="javascript:;">空调</a></li>
-                    <li><a href="javascript:;">冰洗</a></li>
-                    <li><a href="javascript:;">生活</a></li>
-                    <li><a href="javascript:;">周边</a></li>
+                    <li class="clicked"><a href="javascript:;" title="hot">热门</a></li>
+                    <li><a href="javascript:;" title="dianshi">电视</a></li>
+                    <li><a href="javascript:;" title="kongtiao">空调</a></li>
+                    <li><a href="javascript:;" title="bingxi">冰洗</a></li>
+                    <li><a href="javascript:;" title="shenhuo">生活</a></li>
+                    <li><a href="javascript:;" title="zhoubian">周边</a></li>
                 </ul>
             </div>
             <!-- <script>

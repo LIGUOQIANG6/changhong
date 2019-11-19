@@ -4,11 +4,13 @@
     // box-sizing: border-box;
 }
 
+
 // 身体
 body {
     width : 100%;
     height: 100%;
 }
+
 
 // 头部
 header {
@@ -471,35 +473,98 @@ nav {
 }
 
 // 轮播图
-section {
-    // width  :2373px;
-    height    : 500px;
-    background: url(http://images.changhong.com/chgw/gwsy/lbdt/201901/W020190726406921486246.jpg);
+main {
+    // width     :2373px;
+    // height    : 500px;
+    // background: url(http://images.changhong.com/chgw/gwsy/lbdt/201901/W020190726406921486246.jpg);
 
     >.home-banner {
-        height  : 360px;
-        width   : 100%;
-        position: relative;
-        height  : 500px;
-        overflow: hidden;
+        // height  : 360px;
+        // width   : 100%;
+        // position: relative;
+        // height  : 500px;
+        // overflow: hidden;
 
-        >.home-banner-container {
+        .vis {
+            width      : 1920px;
+            height     : 500px;
+            // margin  : 100px auto;
+            position   : relative;
+            overflow   : hidden;
+        }
+
+        ul {
+            width     : 19200px;
+            height    : 500px;
+            list-style: none;
+            position  : absolute;
+        }
+
+        li {
+            width: 1920px;
+            float: left;
+
+        }
+
+        img {
+            width : 100%;
             height: 500px;
+            float : left;
         }
 
-        >.home-banner-tool {
-            top        : 0px;
+        .vis>span {
             position   : absolute;
-            left       : 50%;
-            margin-left: -615px;
+            top        : 45%;
+            font-size  : 50px;
+            cursor     : pointer;
+            user-select: none;
         }
 
-        >.com-width {
-            width : 1226px;
-            margin: 0 auto;
+        .vis>span:last-of-type {
+            right: 0;
         }
+
+        .vis>div>span {
+            float        : left;
+            width        : 8px;
+            height       : 8px;
+            border-radius: 50%;
+            border       : 2px #999 solid;
+            margin       : 0 10px;
+        }
+
+        .quan {
+            position: absolute;
+            left    : 40%;
+            bottom  : 10px;
+            cursor  : pointer;
+        }
+
+        .cl {
+            width     : 12px !important;
+            height    : 12px !important;
+            border    : 0 !important;
+            background: red;
+        }
+
+        // >.home-banner-container {
+        //     height: 500px;
+        // }
+
+        // >.home-banner-tool {
+        //     top        : 0px;
+        //     position   : absolute;
+        //     left       : 50%;
+        //     margin-left: -615px;
+        // }
+
+        // >.com-width {
+        //     width : 1226px;
+        //     margin: 0 auto;
+        // }
 
         // ****再这里
+
     }
 
 }
@@ -739,7 +804,8 @@ main {
                 // vertical-align: middle;
             }
         }
-        .tjlll{
+
+        .tjlll {
             height: 310px;
         }
     }
@@ -884,11 +950,15 @@ main {
 
             .clicked {
                 >a {
-                    background-color: #ee1411;
-                    color           : #fff;
+                    // background-color: #ee1411;
+                    color              : #fff;
                 }
             }
         }
+    }
+
+    .active {
+        background-color: red;
     }
 
     // 左侧固定栏结束
@@ -904,18 +974,21 @@ main {
             width     : 40px;
             height    : 40px;
             background: #cccccc;
-            a{
+
+            a {
                 position: relative;
-                .kefu{
-                    font-size: 36px;
+
+                .kefu {
+                    font-size  : 36px;
                     line-height: 40px;
-                    color: #fefefe;
-                    text-align: center;
+                    color      : #fefefe;
+                    text-align : center;
                 }
             }
         }
+
         .pro-float-center {
-            border-top: 1px solid #f9f9f9;
+            border-top   : 1px solid #f9f9f9;
             border-bottom: 1px solid #f9f9f9;
         }
 
