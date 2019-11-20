@@ -8,6 +8,7 @@
     <title>注册</title>
     <link rel="stylesheet" href="./css/zhuce.css">
     <link rel="stylesheet" href="./font/font_69jkti1sgpl/iconfont.css">
+    <script src="./js/require.js" data-main="./js/main.zhuce.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
 </head>
 <body>
@@ -65,30 +66,29 @@
 </header>
 
 <section class="main">
-    <form action="javascript:;">
+    <form action="javascript:;" action="./php/reg.php"  method="POST" class="text-center">
         <label for="username">手机号码</label>
-        <input type="text" id="username" placeholder="请输入手机号"><span class="iconfont icon-dui block"></span>
+        <input type="text" id="username" placeholder="请输入手机号"><span class="iconfont icon-duihaocheckmark17 block"></span>
         <p class="username">
-                该手机号码已注册，请直接登录
+                <!-- 该手机号码已注册，请直接登录 -->
             <!-- <span class="iconfont icon-cuo"></span>&nbsp;&nbsp;&nbsp;&nbsp; -->
         </p>
-
         <label for="password">设置密码</label>
-        <input type="password" id="password" placeholder="请输入密码"><span class="iconfont icon-dui block"></span>
+        <input type="password" id="password" placeholder="请输入密码"><span class="iconfont icon-duihaocheckmark17 block"></span>
         <p class="password cc">请输入长度在8~16位密码，必须包含字母和数字</p>
 
         <label for="pass">确认密码</label>
-        <input type="password" id="pass" placeholder="请输入密码"><span class="iconfont icon-dui block"></span>
+        <input type="password" id="pass" placeholder="请输入密码"><span class="iconfont icon-duihaocheckmark17 block"></span>
         <p class="pass"></p>
 
         <label for="shape">图形验证</label>
-        <input type="text" id="shape" placeholder="请输入4位验证码"><img src="./images/code.jpg" alt="验证码"><span
-            class="ccc">看不清换一张</span><span class="iconfont icon-dui block"></span>
+        <input type="text" id="shape" placeholder="请输入4位验证码"><img src="./images/yanzhengma.do" alt="验证码"><span
+            class="ccc">看不清换一张</span><span class="iconfont icon-duihaocheckmark17 block"></span>
         <p class="shape"></p>
 
         <label for="msg">短信验证</label>
-        <input type="text" id="msg" placeholder="请输入短信验证码"><span id="btn">获取验证码</span><span
-            class="iconfont icon-dui block"></span>
+        <input type="text" id="msg" placeholder="请输入8888"><span id="btn">获取验证码</span><span
+            class="iconfont icon-duihaocheckmark17 block"></span>
         <p class="msg"></p>
         <p class="cc">每个手机号每天只能获取五次验证码</p>
         <p class="aa"><input type="checkbox" name="" id="" checked>我已阅读并接受<span class="red">版权声明</span>和<span
@@ -96,7 +96,8 @@
         <button>注册</button>
         <a href="">已有账号，立即登录</a>
     </form>
-    <script>
+    <!-- <script>
+        // *********************
         $(function() {
             $("#username").on('keyup', function() {
                 $.ajax({
@@ -115,7 +116,7 @@
                 })
             });
         });
-    </script>
+    </script> -->
 </section>
 
 

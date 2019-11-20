@@ -21,29 +21,60 @@ define(['jquery'], function ($) {
                     scrollTop: top
                 }, 600);
             });
+            // 滚动条事件
             $(window).on('scroll', function () {
                 // 获得当前页面距离滚动条顶部的高度
                 var top = $(document).scrollTop();
                 var i = 0;
-                if (top >= 3600) {
+                if (top >= 3400 && top < 3800) {
                     i = 5;
+                    $('.xhome-fixl').css('display', 'block')
+                } else if (top >= 3800) {
+                    $('.xhome-fixl').css('display', 'none')
                 } else if (top >= 2900) {
                     i = 4;
                 } else if (top >= 2000) {
                     i = 3;
                 } else if (top >= 1100) {
                     i = 2;
-                } else if (top >= 810) {
+                } else if (top >= 650) {
                     i = 1;
+                } else if (top < 650 && top > 500) {
+                    i = 0;
+                    $('.xhome-fixl').css('display', 'block')
                 } else if (top < 500) {
                     $('.xhome-fixl').css('display', 'none')
-                } else if (top > 500) {
+                }
+                $('.xhome-fixl>ul>li>a').removeClass('active');
+                $('.xhome-fixl>ul>li>a:eq(' + i + ')').addClass('active');
+            });
+            // 就绪事件
+            $(function () {
+                var top = $(document).scrollTop();
+                var i = 0;
+                if (top >= 3400 && top < 3800) {
+                    i = 5;
                     $('.xhome-fixl').css('display', 'block')
+                } else if (top >= 3800) {
+                    $('.xhome-fixl').css('display', 'none')
+                } else if (top >= 2900) {
+                    i = 4;
+                } else if (top >= 2000) {
+                    i = 3;
+                } else if (top >= 1100) {
+                    i = 2;
+                } else if (top >= 650) {
+                    i = 1;
+                } else if (top < 650 && top > 500) {
+                    $('.xhome-fixl').css('display', 'block')
+                    i = 0;
+                } else if (top < 500) {
+                    $('.xhome-fixl').css('display', 'none')
                 }
                 $('.xhome-fixl>ul>li>a').removeClass('active');
                 console.log($('.xhome-fixl>ul>li>a:eq(5)'))
                 $('.xhome-fixl>ul>li>a:eq(' + i + ')').addClass('active');
-            });
+            })
         },
         // 楼梯结束
 
@@ -84,6 +115,44 @@ define(['jquery'], function ($) {
             })
         },
         // 渲染页面结束
+
+        // 右侧悬浮框开始
+        huidaodingbu: function () {
+            // $(function () {
+                // var link = $('huidaodingbu')
+                // var top = document.documentElement.scrollTop;
+                // if (top > 1500) {
+                //     link.style.display = 'block';
+                // } else {
+                //     link.style.display = 'none';
+                // }
+
+                $('.huidaodingbu').on('click', function () {
+                    console.log(89)
+                    var timer = setInterval(function () {
+                        console.log(58)
+                        var top = document.documentElement.scrollTop;//不断的获取 
+                        var speed = top / 10;//缓冲
+                        if (top <= 0) {
+                            clearInterval(timer);
+                        }
+                        document.documentElement.scrollTop = top - speed;//不断获取的新的top值-100
+                    }, 5);
+                });
+                // link.onclick = function () {
+                //     console.log(89)
+                //     var timer = setInterval(function () {
+                //         var top = document.documentElement.scrollTop;//不断的获取 
+                //         var speed = top / 10;//缓冲
+                //         if (top <= 0) {
+                //             clearInterval(timer);
+                //         }
+                //         document.documentElement.scrollTop = top - speed;//不断获取的新的top值-100
+                //     }, 5);
+                // }
+            // })
+        },
+        // 右侧悬浮框结束
 
     }
 });

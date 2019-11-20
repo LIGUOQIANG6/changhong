@@ -674,6 +674,9 @@ main .xhome-fixl ul li a {
   color: #666;
   border-bottom: 1px solid #d6d6d6;
 }
+main .xhome-fixl ul li a:hover {
+  background: red;
+}
 main .xhome-fixl ul .clicked > a {
   color: #fff;
 }

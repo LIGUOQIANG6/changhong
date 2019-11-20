@@ -31,3 +31,8 @@ require(['jquery','jquerylun'],function($,lb){
 require(['jquery','index'],function($,index){
     index.render();
 });
+
+//右侧悬浮回顶部
+require(['jquery','index'],function($,index){
+    index.huidaodingbu();
+});

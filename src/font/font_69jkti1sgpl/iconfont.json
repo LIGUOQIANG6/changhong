@@ -6,11 +6,25 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "76577",
+      "name": "叉子删除带边框",
+      "font_class": "chazishanchudaibiankuang",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
       "icon_id": "173159",
       "name": "物流管理icon",
       "font_class": "wuliuguanliicon",
       "unicode": "e60d",
       "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "609890",
+      "name": "对号",
+      "font_class": "duihaocheckmark17",
+      "unicode": "e770",
+      "unicode_decimal": 59248
     },
     {
       "icon_id": "654164",
