@@ -94,13 +94,13 @@ define(['jquery'], function ($) {
                         temp += `
                         <div class="home-ele-f ">
                             <div class="home-ele-img">
-                                <a href='javascript:;' target="_blank">
+                                <a href='http://localhost:8080/changhong/src/html/xiangqing-2.html' target="_blank">
                                     <img data-echo="http://images.changhong.com/chgw/gwsy/syds/201703/W020190702673367874948_160.png"
                                         class="lazy" SRC="${baseUrl}/${pic[0].src}" alt="${pic[0].src}" />
                                 </a>
                             </div>
                             <div class="home-ele-text" r3code="CH5012137">
-                                <h1><a href='javascript:;' target="_blank" title="65英寸 AI音响物联无边全面屏">${elm.title}</a>
+                                <h1><a href='http://localhost:8080/changhong/src/html/xiangqing-2.html' target="_blank" title="65英寸 AI音响物联无边全面屏">${elm.title}</a>
                                 </h1>
                                 <p>${elm.details}</p>
                                 <h2>￥${elm.price}</h2>

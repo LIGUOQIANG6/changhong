@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font/font_69jkti1sgpl/iconfont.css">
+    <link rel="stylesheet" href="./css/gouwuche.css">
+    <script src="./js/require.js" data-main="./js/main.gouwuche.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!--********************标题开始******************** -->
+    <header>
+        <div class="toolbar-container">
+            <div class="toolbar-left">
+                <ul>
+                    <li><a href='' class="cur">长虹官网</a></li>
+                    <li><a href='' target="_blank">关于长虹</a></li>
+                    <li><a href='' target="_blank">商务合作</a></li>
+                    <li><a href="" target="_blank"><span class="iconfont icon-diqiu"></span>&nbsp;&nbsp;English</a></li>
+                </ul>
+            </div>
+            <div class="toolbar-right">
+                <div class="toolbar-login" id="unLoginDiv">
+                    <a href="./html/denglu.html" id="sso_login">登录</a>
+                    <span>|</span>
+                    <a href="./zhuce.html" target="_blank">注册</a>
+                </div>
+                <div class="toolbar-login" style="display: none" id="hasLoginDiv">
+                    <!--<a href="">登录</a>-->
+                    <!--<span>|</span>-->
+                    <!--<a href="">注册</a>-->
+                    <a href="javascript:;" class="user-account" id="user-account"></a>
+                    <a href="javascript:;" id="sso_logout">退出</a>
+                </div>
+                <div class="toolbar-mytool">
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href='http://cn.changhong.com/wdch/' class="tool-myCQ" target="_blank"><span
+                                    class="iconfont icon-wode"></span>我的长虹</a>
+                        </div>
+                    </div>
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row hcyp-ewm-container">
+                            <a href='http://cn.changhong.com/activity/xrzm2.html' target="_blank"
+                                class="tool-news"><span class="iconfont icon-liaotian"></span>虹创有品</a>
+                        </div>
+                    </div>
+                    <div class="tool-container tool-shoppingCar-container">
+                        <div class="tool-container-row">
+                            <a href="javascript:;" class="tool-shoppingCar"><span id="mycartNum"
+                                    style="display:none;"></span><span
+                                    class="iconfont icon-changyongtubiao-xianxingdaochu-zhuanqu-"></span>购物车</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--******************** 标题结束******************** -->
+    <!-- ********************导航栏开始********************-->
+    <nav>
+        <div class="com-width clearfix header-nav-container">
+            <div class="header-log">
+                <a href="javascript:;">
+                    <img src="./images/01.png" alt="一张图片">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- ********************导航栏结束********************-->
+    <!-- 购物车部分开始 -->
+    <div class="gouwu">
+        <div class="pro-addin pro-center">
+            <div class="gouwuche-quanyuan">
+                <div class="gouwuche-quanyuan-left">
+                    <div>
+                        <input type="checkbox" id="gouwuche-quanyuan-xuan">
+                    </div>
+                    <p>全选<span style="color: red;">2</span>种商品</p>
+                </div>
+                <div class="gouwuche-quanyuan-right">
+                    <div class="gouwuche-quanyuan-right-dian"></div>
+                    <p>0种商品已失效</p>
+                </div>
+            </div>
+            <div class="pro-addin-detail">
+                <div class="pro-addin-detail-quan">
+                    <input type="checkbox" name="" id="">
+                </div>
+                <div class="pro-addin-detail-rt">
+                    <div class="pro-addin-detail-rt-top">
+                        <span class="iconfont icon-chazishanchudaibiankuang icon-aixinll"></span>
+                        <span class="iconfont icon-aixin icon-aixinll"></span>
+                    </div>
+                    <div class="pro-addin-detail-rt-top-xia">
+                        <img src="./images/gouwu-01.jpg" width=110 height=110 alt="">
+                        <div class="meiling">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;美菱M鲜生BCD-506WQ3S十字对开冰箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    style="color: red;">8999.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button>-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有货
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-addin-detail">
+                <div class="pro-addin-detail-quan">
+                    <input type="checkbox" name="" id="">
+                </div>
+                <div class="pro-addin-detail-rt">
+                    <div class="pro-addin-detail-rt-top">
+                        <span class="iconfont icon-chazishanchudaibiankuang icon-aixinll"></span>
+                        <span class="iconfont icon-aixin icon-aixinll"></span>
+                    </div>
+                    <div class="pro-addin-detail-rt-top-xia">
+                        <img src="./images/gouwu-01.jpg" width=110 height=110 alt="">
+                        <div class="meiling">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;美菱M鲜生BCD-506WQ3S十字对开冰箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                    style="color: red;">8999.00</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button>-</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>+</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有货
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pro-addin-others"></div>
+        </div>
+    </div>
+    <!-- 购物车部分结束 -->
+
+    <!--********************脚注开始********************  -->
+    <footer>
+        <!-- ********************物流开始******************** -->
+        <div class="com-width">
+            <div class="footer-help">
+                <div class="help-about">
+                    <div class="about-CQ lf">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-wuliuguanliicon "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">物流快线</h1>
+                            <p>及时响应准确送达</p>
+                        </div>
+                    </div>
+                    <div class="about-CQ rt">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-919caidan_xiuli "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">无忧报修</h1>
+                            <p>7*24小时客服在线</p>
+                        </div>
+                    </div>
+                    <div class="about-CQ about-CQ-center">
+                        <div class="about-icon" style="margin-top: -12px">
+                            <span class="iconfont icon-moduanwangdian "></span>
+                        </div>
+                        <div class="about-describe">
+                            <h1 style="font-weight: bold;">售后网点</h1>
+                            <p>20000余家售后网点</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="help-ways">
+                    <div class="help-server lf">
+                        <ul class="lf">
+                            <li class="help-title">品牌渠道</li>
+                            <li>
+                                <a href="javasccript:;" target="_blank">长虹天猫</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">长虹京东</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">长虹苏宁</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">长虹国美</a>
+                            </li>
+                        </ul>
+                        <ul class="lf ml40">
+                            <li class="help-title">友情链接</li>
+                            <li>
+                                <a href="javascript:;" target="_blank">MELING美菱</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">中科美菱</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">日电科技</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">长虹手机</a>
+                            </li>
+                        </ul>
+                        <ul class="lf ml40">
+                            <li class="help-title">友情链接</li>
+                            <li>
+                                <a href="javascript:;" target="_blank">家事帮</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">腾讯视频•TV端</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">虹创有品</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">长虹电子</a>
+                            </li>
+                        </ul>
+                        <ul class="rt">
+                            <li class="help-title">服务支持</li>
+                            <li>
+                                <a href="javascript:;" target="_blank">产品查询</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">维修服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">延保服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">下载中心</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-team help-server lf">
+                        <ul class="lf">
+                            <li class="help-title">长虹集团</li>
+                            <li>
+                                <a href="javascript:;" target="_blank">公司动态</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">投资者关系</a>
+                            </li>
+                        </ul>
+                        <ul class="rt">
+                            <li class="help-title">商务合作</li>
+                            <li>
+                                <a href="javascript:;" target="_blank">经销商登录</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">供应商登录</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" target="_blank">服务商登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="help-tel lf">
+                        <p>
+                            <span class="iconfont icon-huaban- zaixian "></span>
+                            <a href="javascript:;">在线客服</a>
+                        </p>
+                        <p>
+                            <span class="iconfont icon-wentifankui  zaixian"></span>
+                            <a href="javascript:;">问题反馈</a>
+                        </p>
+                        <h1 style="margin-top:26px;">4008-111-666</h1>
+                        <h1>4008-111-666</h1>
+                    </div>
+                    <div class="help-code">
+                        <div class="help-code-box lf">
+                            <img src="./images/erweima.jpg" alt="">
+                            <p>官方特卖</p>
+                        </div>
+                        <div class="help-code-box rt">
+                            <img src="./images/erweima.jpg" alt="">
+                            <p>长虹服务</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-statement clearfix">
+            <div class="com-width">
+                <div class="foot-logo">
+                    <img src="./images/footer-logo_ch.png" width="227" height="36" alt="">
+                </div>
+                <div class="foot-txt">
+                    <p><a href="javascript:;">蜀ICP备09001737号-1</a>2019 四川长虹电器股份有限公司 版权所有</p>
+                    <p>地址：四川省绵阳市高新区绵兴东路35号</p>
+                </div>
+                <div class="foot-note">
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-01.png" alt="" width="26" height="31">
+                        经营性网站备案信息
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-02.png" alt="" width="26" height="31">
+                        诚信网站
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-04.png" alt="" width="26" height="31">
+                        工商网监
+                    </p>
+                    <p style="margin-left: 144px">
+                        <img src="./images/footer-01.png" alt="" width="26" height="31">
+                        网上交易保障中心
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ********************物流结束******************** -->
+    </footer>
+    <!--********************脚注结束********************  -->
+</body>
+
+</html>
